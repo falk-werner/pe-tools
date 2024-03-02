@@ -16,19 +16,14 @@ public:
     {
         file_reader reader(filename);
 
-        if (is_exe(filename)) {
-            reader.seek(PE_SIGNATURE_OFFSET_OFFSET);
-            auto const signature_offset = reader.u32();
-            reader.seek(signature_offset);
-            auto const signature = reader.u32();
-            if (signature != PE_SIGNATUE) {
-                throw std::runtime_error("signature mismatch");
-            }
-            coff_header_offset = signature_offset + 4;
+        reader.seek(PE_SIGNATURE_OFFSET_OFFSET);
+        auto const signature_offset = reader.u32();
+        reader.seek(signature_offset);
+        auto const signature = reader.u32();
+        if (signature != PE_SIGNATUE) {
+            throw std::runtime_error("signature mismatch");
         }
-        else {
-            coff_header_offset = 0;
-        }
+        coff_header_offset = signature_offset + 4;
 
         read_header(reader);
         read_optional_header(reader);
@@ -37,11 +32,6 @@ public:
     }
 
 private:
-    bool is_exe(std::string const & filename)
-    {
-        return (std::filesystem::path(filename).extension().string() == ".exe");
-    }
-
     void read_header(file_reader & reader)
     {
         header.machine = reader.u16();
