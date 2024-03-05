@@ -56,7 +56,16 @@ int main(int argc, char* argv[]) {
             std::cout << "\tnumber of RVA and sizes   : " << std::dec << opt_header.number_of_rva_and_sizes << std::endl;
             std::cout << std::endl;
 
-            std::cout << "Section Headers: " << std::endl;
+            std::cout << "RVA and sizes:" << std::endl;
+            size_t i = 0;
+            for(auto const &entry: f.get_rva_and_sizes()) {
+                std::cout << "\tRVA            : " << std::dec << i++ << std::endl;
+                std::cout << "\tvirtual size   : 0x" << std::hex << entry.size << std::endl;
+                std::cout << "\tvirtual address: 0x" << std::hex << entry.virtual_address << std::endl;
+                std::cout << std::endl;
+            }
+
+            std::cout << "Section Headers:" << std::endl;
             for(auto const &section: f.get_sections()) {
                 std::cout << "\tsection name           : " << section.name << std::endl;
                 std::cout << "\tvirtual size           : 0x" << std::hex << section.virtual_size << std::endl;

@@ -1,7 +1,6 @@
 #include "pe_tools/pe_file.hpp"
 #include "pe_tools/file_reader.hpp"
 #include "pe_tools/import_dir_entry.hpp"
-#include "pe_tools/image_data_directory.hpp"
 
 #include <filesystem>
 #include <stdexcept>
@@ -190,6 +189,10 @@ coff_header const & pe_file::get_coff_header() const
 optional_header const & pe_file::get_optional_header() const
 {
     return d->opt_header;
+}
+
+std::vector<image_data_directory> const & pe_file::get_rva_and_sizes() const {
+    return d->data_directories;
 }
 
 std::vector<section_header> const &pe_file::get_sections() const

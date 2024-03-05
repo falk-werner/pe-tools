@@ -4,6 +4,7 @@
 #include <pe_tools/coff_header.hpp>
 #include <pe_tools/optional_header.hpp>
 #include <pe_tools/section_header.hpp>
+#include <pe_tools/image_data_directory.hpp>
 
 #include <string>
 #include <vector>
@@ -29,6 +30,7 @@ public:
     coff_header const & get_coff_header() const;
     optional_header const & get_optional_header() const;
 
+    std::vector<image_data_directory> const & get_rva_and_sizes() const;
     std::vector<section_header> const & get_sections() const;
     std::vector<std::string> const & get_import_dlls() const;    
 
