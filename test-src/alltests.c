@@ -28,6 +28,16 @@ void __main(void)
 
         {"args", &test_args},
 
+        {"cli_short_flag", &test_cli_short_flag},
+        {"cli_long_flag", &test_cli_long_flag},
+        {"cli_short_opt", &test_cli_short_opt},
+        {"cli_long_opt", &test_cli_long_opt},
+        {"cli_extra_arg", &test_cli_extra_arg},
+        {"cli_empty_opts", &test_cli_empty_opts},
+        {"cli_error_missing_arg", &test_cli_error_missing_arg},
+        {"cli_error_unknown_opt", &test_cli_error_unknown_opt},
+        {"cli_complex", &test_cli_complex},
+
         {"pe_error", &test_error},
         {"pe_error ignore if null", &test_error_null},
 

@@ -26,6 +26,16 @@ int test_str_builder_reset(void);
 
 int test_args(void);
 
+int test_cli_short_flag(void);
+int test_cli_long_flag(void);
+int test_cli_short_opt(void);
+int test_cli_long_opt(void);
+int test_cli_extra_arg(void);
+int test_cli_empty_opts(void);
+int test_cli_error_missing_arg(void);
+int test_cli_error_unknown_opt(void);
+int test_cli_complex(void);
+
 int test_error(void);
 int test_error_null(void);
 
