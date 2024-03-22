@@ -1,0 +1,6 @@
+#ifndef PETOOLS_VERSION_H
+#define PETOOLS_VERSION_H
+
+#define PETOOLS_VERSION "@PROJECT_VERSION@"
+
+#endif

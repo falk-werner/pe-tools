@@ -1,4 +1,5 @@
 #include "pe/reader.h"
+#include "version.h"
 
 #include "util/print.h"
 #include "util/args.h"
@@ -23,7 +24,7 @@ void __main(void)
 static void print_usage(void)
 {
     print(
-        "pe-info, (c) 2024 Falk Werner <github.com/falk-werner>\n"
+        "pe-info V" PETOOLS_VERSION ", (c) 2024 Falk Werner <github.com/falk-werner>\n"
         "Print Microsoft EXE and DLL file information\n"
         "\n"
         "Usage:\n"

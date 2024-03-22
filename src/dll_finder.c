@@ -1,4 +1,5 @@
 #include "pe/dll_finder.h"
+#include "version.h"
 
 #include "util/args.h"
 #include "util/cli.h"
@@ -35,7 +36,7 @@ void __main(void)
 static void print_usage()
 {
     print(
-        "dll-finder, (c) 2024 Falk Werner <github.com/falk-werner>\n"
+        "dll-finder V" PETOOLS_VERSION ", (c) 2024 Falk Werner <github.com/falk-werner>\n"
         "Find DLLs\n"
         "\n"
         "Usage:\n"

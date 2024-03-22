@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(pe-tools)
+project(pe-tools VERSION 1.0.0)
 
 set(CMAKE_C_STANDARD 99)
 
@@ -28,14 +28,19 @@ add_library(pe STATIC
 target_include_directories(pe PUBLIC inc)
 target_include_directories(pe PRIVATE lib)
 
+configure_file(src/version.h.in version.h @ONLY)
+
 add_executable(pe-info src/pe_info.c)
 target_link_libraries(pe-info PRIVATE pe util)
+target_include_directories(pe-info PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
 add_executable(dll-finder src/dll_finder.c)
 target_link_libraries(dll-finder PRIVATE pe util)
+target_include_directories(dll-finder PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
 add_executable(pe-depends src/pe_depends.c)
 target_link_libraries(pe-depends PRIVATE pe util)
+target_include_directories(pe-depends PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
 add_library(test STATIC
     lib/test/test.c)
