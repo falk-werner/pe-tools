@@ -11,6 +11,8 @@ int str_eqi(char const * a, char const * b);
 
 int str_find(char const * value, char c);
 
+int str_starts_with(char const * value, char const * prefix);
+
 char * str_dup(char const * s);
 
 char * u2str(unsigned long long value);

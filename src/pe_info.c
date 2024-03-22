@@ -1,8 +1,8 @@
-#include <pe/reader.h>
+#include "pe/reader.h"
+
 #include "util/print.h"
 #include "util/args.h"
 #include "util/str.h"
-#include "pe/reader.h"
 
 #include <windows.h>
 

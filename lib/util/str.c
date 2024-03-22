@@ -97,3 +97,17 @@ char * u2hexstr(unsigned long long value)
 
     return &(buffer[pos]);
 }
+
+int str_starts_with(char const * value, char const * prefix)
+{
+    while (*prefix != 0) {
+        if (*prefix != *value) {
+            return 0;
+        }
+
+        prefix++;
+        value++;
+    }
+
+    return 1;
+}
