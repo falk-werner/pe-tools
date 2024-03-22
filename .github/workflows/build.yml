@@ -46,7 +46,7 @@ jobs:
           cmake --install build --prefix install
       
       - name: Upload
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: pe-tools
           path: install/bin
