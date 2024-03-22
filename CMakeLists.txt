@@ -42,6 +42,8 @@ add_executable(pe-depends src/pe_depends.c)
 target_link_libraries(pe-depends PRIVATE pe util)
 target_include_directories(pe-depends PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
+install(TARGETS pe-info dll-finder pe-depends)
+
 add_library(unit_test STATIC
     lib/test/test.c)
 target_include_directories(unit_test PUBLIC lib)
