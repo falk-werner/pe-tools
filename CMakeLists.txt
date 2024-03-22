@@ -25,7 +25,6 @@ add_library(pe STATIC
     lib/pe/dll_finder.c
     lib/pe/known_dlls.c
 )
-target_include_directories(pe PUBLIC inc)
 target_include_directories(pe PRIVATE lib)
 
 configure_file(src/version.h.in version.h @ONLY)
