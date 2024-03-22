@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file cli.c
+/// \brief Implementation of command line parser.
+
 #include "util/cli.h"
 #include "util/str.h"
 

@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file args.c
+/// \brief Implementation of command line splitter.
+
 #include "util/args.h"
 #include "util/str_builder.h"
 #include "util/panic.h"

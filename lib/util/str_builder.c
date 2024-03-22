@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file str_builder.c
+/// \brief Implementation of string builder.
+
 #include "util/str_builder.h"
 #include "util/str.h"
 #include "util/heap.h"

@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file str.c
+/// \brief Implementation of string handling functions.
+
 #include "util/str.h"
 #include "util/heap.h"
 

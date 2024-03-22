@@ -133,7 +133,6 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 
 INPUT                  = README.md \
-                         inc \
                          lib/pe \
                          lib/util
 INPUT_ENCODING         = UTF-8

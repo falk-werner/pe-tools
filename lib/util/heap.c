@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file heap.c
+/// \brief Implementation of memory allocation.
+
 #include "util/heap.h"
 #include "util/panic.h"
 

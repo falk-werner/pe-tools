@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file str_stack.c
+/// \brief Implementation of stack of string.
+
 #include "util/str_stack.h"
 #include "util/heap.h"
 #include "util/str.h"

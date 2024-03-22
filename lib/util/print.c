@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file print.c
+/// \brief Implementation of text output.
+
 #include "util/print.h"
 #include "util/str.h"
 
