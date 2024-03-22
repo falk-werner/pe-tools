@@ -42,9 +42,9 @@ add_executable(pe-depends src/pe_depends.c)
 target_link_libraries(pe-depends PRIVATE pe util)
 target_include_directories(pe-depends PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
-add_library(test STATIC
+add_library(unit_test STATIC
     lib/test/test.c)
-target_include_directories(test PUBLIC lib)
+target_include_directories(unit_test PUBLIC lib)
 
 add_executable(alltests
     test-src/alltests.c
@@ -57,4 +57,7 @@ add_executable(alltests
     test-src/pe/test_buffer_reader.c
 )
 target_include_directories(alltests PRIVATE test-src)
-target_link_libraries(alltests PRIVATE test util pe)
+target_link_libraries(alltests PRIVATE unit_test util pe)
+
+include(CTest)
+add_test(NAME alltests COMMAND alltests)
