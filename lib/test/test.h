@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #ifndef TEST_H
 #define TEST_H
 

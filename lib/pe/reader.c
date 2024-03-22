@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #include "pe/reader.h"
 #include "pe/error_intern.h"
 #include "pe/buffer_reader.h"

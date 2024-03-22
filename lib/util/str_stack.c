@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #include "util/str_stack.h"
 #include "util/heap.h"
 #include "util/str.h"

@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #ifndef PE_KNOWN_DLLS
 #define PE_KNOWN_DLLS
 

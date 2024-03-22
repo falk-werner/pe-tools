@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #include "alltests.h"
 #include "util/str_builder.h"
 #include "util/str.h"

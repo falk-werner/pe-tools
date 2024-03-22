@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Falk Werner
+// SPDX-License-Identifier: MIT
+
 #ifndef PE_DLL_FINDER_H
 #define PE_DLL_FINDER_H
 

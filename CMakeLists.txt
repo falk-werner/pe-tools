@@ -1,3 +1,6 @@
+# Copyright (c) 2024 Falk Werner
+# SPDX-License-Identifier: MIT
+
 cmake_minimum_required(VERSION 3.22)
 project(pe-tools VERSION 1.0.0)
 
