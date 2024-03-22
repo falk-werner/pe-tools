@@ -21,7 +21,7 @@ void str_stack_release(struct str_stack * stack)
     heap_free(stack);
 }
 
-void str_stack_push(struct str_stack * stack, char * value)
+void str_stack_push(struct str_stack * stack, char const * value)
 {
     if (stack->capacity <= stack->size) {
         stack->capacity *= 2;

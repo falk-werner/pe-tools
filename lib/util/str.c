@@ -1,6 +1,15 @@
 #include "util/str.h"
 #include "util/heap.h"
 
+static char to_lower(char c)
+{
+    if (('A' <= c) && (c <= 'Z')) {
+        return c - 'A' + 'a';
+    }
+
+    return c;
+}
+
 unsigned int str_len(char const * value)
 {
     unsigned int result = 0;
@@ -27,6 +36,29 @@ int str_eq(char const * a, char const * b)
 
     return (((*a) - (*b)) == 0);
 }
+
+int str_eqi(char const * a, char const * b)
+{
+    while ((*a != '\0') && (to_lower(*a) == to_lower(*b))) {
+        a++;
+        b++;
+    }
+
+    return ((to_lower(*a) - to_lower(*b)) == 0);
+
+}
+
+int str_find(char const * value, char c)
+{
+    for (int i = 0; value[i] != '\0'; i++) {
+        if (value[i] == c) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
 
 char * str_dup(char const * s)
 {

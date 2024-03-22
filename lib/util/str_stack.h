@@ -12,7 +12,7 @@ struct str_stack * str_stack_new(void);
 
 void str_stack_release(struct str_stack * stack);
 
-void str_stack_push(struct str_stack * stack, char * value);
+void str_stack_push(struct str_stack * stack, char const * value);
 
 char * str_stack_pop(struct str_stack * stack);
 

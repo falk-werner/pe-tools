@@ -4,16 +4,19 @@ project(pe-tools)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 99)
 
-add_library(pe-tools STATIC
-    lib/pe_tools/file_reader.cpp
-    lib/pe_tools/pe_file.cpp
-    lib/pe_tools/known_dlls.cpp
-    lib/pe_tools/dll_finder.cpp)
-target_include_directories(pe-tools PUBLIC inc)
-target_include_directories(pe-tools PRIVATE lib)
+add_compile_options(-nostdlib -nodefaultlibs)
+add_link_options(-nostdlib -nodefaultlibs -lkernel32)
 
-add_executable(pe-depends src/pe_depends.cpp)
-target_link_libraries(pe-depends PRIVATE pe-tools)
+#add_library(pe-tools STATIC
+#    lib/pe_tools/file_reader.cpp
+#    lib/pe_tools/pe_file.cpp
+#    lib/pe_tools/known_dlls.cpp
+#    lib/pe_tools/dll_finder.cpp)
+#target_include_directories(pe-tools PUBLIC inc)
+#target_include_directories(pe-tools PRIVATE lib)
+
+#add_executable(pe-depends src/pe_depends.cpp)
+#target_link_libraries(pe-depends PRIVATE pe-tools)
 
 add_library(util STATIC
     lib/util/print.c
@@ -42,15 +45,12 @@ add_executable(pe-depends-static
     src/pe_depends_static/file_reader.c
     )
 target_link_libraries(pe-depends-static PRIVATE util)
-target_link_options(pe-depends-static PRIVATE -nostdlib -nodefaultlibs -lkernel32)
 
 add_executable(pe-info src/pe_info.c)
 target_link_libraries(pe-info PRIVATE pe util)
-target_link_options(pe-info PRIVATE -nostdlib -nodefaultlibs -lkernel32)
 
 add_executable(dll-finder src/dll_finder.c)
 target_link_libraries(dll-finder PRIVATE pe util)
-target_link_options(dll-finder PRIVATE -nostdlib -nodefaultlibs -lkernel32)
 
 
 add_library(test STATIC
@@ -71,5 +71,4 @@ target_include_directories(alltests PRIVATE test-src)
 target_link_libraries(alltests PRIVATE test)
 target_link_libraries(alltests PRIVATE util)
 target_link_libraries(alltests PRIVATE pe)
-target_link_options(alltests PRIVATE -nostdlib -nodefaultlibs -lkernel32)
 

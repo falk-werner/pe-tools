@@ -14,6 +14,9 @@ int test_str_eq_not_equals_first_empty(void);
 int test_str_eq_not_equals_second_empty(void);
 int test_u2str(void);
 int test_u2hexstr(void);
+int test_str_eqi(void);
+int test_str_find(void);
+int test_str_find_fail(void);
 
 int test_heap_alloc_free(void);
 int test_heap_free_nullptr(void);

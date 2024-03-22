@@ -97,3 +97,18 @@ int test_u2hexstr(void)
 
     return result;
 }
+
+int test_str_eqi(void)
+{
+    return str_eqi("Hello", "helLO") ? 0 : 1;
+}
+
+int test_str_find(void)
+{
+    return (2 == str_find("Hello", 'l')) ? 0 : 1;
+}
+
+int test_str_find_fail(void)
+{
+    return (-1 == str_find("Hello", 'z')) ? 0 : 1;
+}

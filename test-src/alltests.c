@@ -16,6 +16,9 @@ void __main(void)
         {"str_eq not equal 2nd empty", &test_str_eq_not_equals_second_empty},
         {"u2str", &test_u2str},
         {"u2hexstr", &test_u2hexstr},
+        {"str_eqi", &test_str_eqi},
+        {"str_find", &test_str_find},
+        {"find_fail", &test_str_find_fail},
 
         {"heap_alloc and heap_free", &test_heap_alloc_free},
         {"heap_free accept null pointer", &test_heap_free_nullptr},
