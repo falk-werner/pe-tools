@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file dll_finder.c
+/// \brief Implementation of pe_dll_finder.
+
 #include "pe/dll_finder.h"
 #include "pe/known_dlls.h"
 

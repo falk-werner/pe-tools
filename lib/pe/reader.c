@@ -1,8 +1,11 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file reader.c
+/// \brief Implementation of pe_reader struct.
+
 #include "pe/reader.h"
-#include "pe/error_intern.h"
+#include "pe/error.h"
 #include "pe/buffer_reader.h"
 
 #include "util/heap.h"

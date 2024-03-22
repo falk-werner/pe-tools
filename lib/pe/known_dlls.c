@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file known_dlls.c
+/// \brief Implementation of determination knwon DLLs.
+
 #include "pe/known_dlls.h"
 #include <windows.h>
 

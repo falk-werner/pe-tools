@@ -1,6 +1,9 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
+/// \file buffer_reader.c
+/// \brief Implementation of pe_buffer_reader.
+
 #include "pe/buffer_reader.h"
 
 void pe_buffer_reader_init(struct pe_buffer_reader * reader, pe_u8 const * data, int size)

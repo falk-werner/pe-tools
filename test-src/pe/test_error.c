@@ -1,7 +1,7 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
-#include "pe/error_intern.h"
+#include "pe/error.h"
 #include "util/str.h"
 
 int test_error(void)

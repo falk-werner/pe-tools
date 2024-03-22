@@ -1,13 +1,16 @@
 // Copyright (c) 2024 Falk Werner
 // SPDX-License-Identifier: MIT
 
-#include "pe/error_intern.h"
+#include "pe/error.h"
 #include "util/heap.h"
 #include "util/str.h"
 
+/// \file error.c
+/// \brief Implementation of pe_error struct.
+
 struct pe_error
 {
-    char * message;
+    char * message;     ///< error message
 };
 
 void pe_error_set(struct pe_error * * err, char const * message)
